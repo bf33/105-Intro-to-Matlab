@@ -1,16 +1,20 @@
 function I = Simpson(x,y)
 % By: Blake Franklin
-% Goal: estimate integral from x -> y using 
-%   Simpson's 1/3 rule, and trapezoidal rule if there 
-%   are an odd number of intervals in x and y.
-% Inputs: x - Independent variable array
-%         y - Dependent variable array
-%         x must have constant spacing
+% Estimates integral from x -> y using 
+% the Simpson's 1/3 rule, and trapezoidal rule for the last section
+% if there are an odd number of intervals in x and y.
+%
+% Inputs: 
+%   x - Independent variable array
+%   y - Dependent variable array
+%   (x must have constant spacing)
+%
 % Outputs:
 %     I - The estimated integral of the function
+%
 % CAUTION: Code might not work for #'s more precise 
-%   than 7 decimal places, (error msg for spacing appears)
-%    Yes I know it was lazy.
+% than 7 decimal places, (error msg for spacing appears)
+% Yes I know it was lazy.
 
 % Input checks...nargin/dimensions/spacing
 
