@@ -1,13 +1,16 @@
 function Y = HeunsMethod(f,h,xi,xf,y0)
 % By: Blake Franklin
+%
 % Uses Heun's Method in order to estimate function values
 % of a differential equation
+%
 % Inputs: 
 %   f = the function's derivative (ODE)
 %   h = step size
 %   xi = left bound (of interval you want)
 %   xf = right bound
 %   y0 = initial condition (function value at xi)
+%
 % Output:
 %   Y = array of function values over the interval at
 %   the specific steps. The first value of Y is the
