@@ -47,12 +47,9 @@ for r=1:n-1   % Selects values along the diagonal
 end
 U=A;
 L=eye(m,n);  %Creates the diagonal ones that the L is missing
-for t=1:n-1  %Only way I found to make L have ones as well as values
+for t=1:n-1  %Only way I found to make L have ones as well as values (edit-I should concatenate here)
     L((t+1:n),t)=Lproto((t+1:n),t);
 end
-L
-U
-P
 end
         
         
