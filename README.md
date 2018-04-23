@@ -1,7 +1,6 @@
-# 105-Intro-to-Matlab
-Simple and yet necessary
+105-Intro-to-Matlab
+-------------------
+These files are my first attempts at writing code.
+In no particular order:
 
-These files encompass my first experiences with coding.
-
-
-# 
+## Heun's Method
