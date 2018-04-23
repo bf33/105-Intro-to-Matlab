@@ -1,22 +1,23 @@
  function [root, fx, ea, iter]= falsePosition(func,xl,xu,es,maxiter)
 % <---show/hide. By: BLAKE FRANKLIN
-% It worked for the class example... I hope it works again
-% I tried x^4 stuff and it really makes it take a while
-% You have to enter syms  and then the function(yourvariable) first
 %
-% Function will find the roots of an input equation (func) and specify
-% details of the process: 
-% ea= approximate relative percent error
-% iter= # of iterations performed
-% fx= function evaluated at root location
-%
-% inputs: 
-% func= name of your function to evaluate
-% xl= lower bound
-% xu= upper bound
-% es= desired relative error (default is .0001%)
-% maxiter= # of iterations that this will perform, defaults to 200
+% Function will find the roots of an input equation
+% using the false position (Newton-Raphson) method
+% 
+% Inputs: 
+%  func = name of your function to evaluate
+%  xl = lower bound
+%  xu = upper bound
+%  es = desired relative error (default is .0001%)
+%  maxiter = # of iterations that this will perform, defaults to 200
+% 
+% Outputs:
+%  ea= approximate relative percent error
+%  iter= # of iterations performed
+%  fx= function evaluated at root location
+
 format long
+
 if nargin<3  % All this is to make sure inputs are correct
     error('Enter correct inputs')
 end
@@ -35,6 +36,7 @@ end
 iter=0; 
 xr=xl; %This starts xr as the lower bound
 ea2=100; % starts the loop in my code
+
 while ea2>es && iter<maxiter
     xrold=xr; % Do this to store old value before computations below
     xr= double(xu- (func(xu)*(xl-xu))/(func(xl)-func(xu)));
